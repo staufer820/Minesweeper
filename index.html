@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <h2 style="color: red;" id="bombsLeft"></h2>
+    <div class="game" id="game"></div><br><br>
+    <h2 id="win"></h2>
+    <label for="selectDifficulty">Schwierigkeit:</label>
+    <select name="selectDifficulty" id="selectDifficulty">
+        <option value="0">Einfach</option>
+        <option value="1">Mittel</option>
+        <option value="2">Schwierig</option>
+    </select><br><br>
+    <button class="newGame" onclick="startGame()" id="start">Neues Spiel</button>
+    <script src="javascript/script.js"></script>
+</body>
+</html>

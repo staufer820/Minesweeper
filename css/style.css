@@ -1,0 +1,73 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.game {
+    display: inline-block;
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.newGame {
+    padding: 15px;
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    box-shadow: 2px 3px 5px rgb(167, 163, 163);
+    cursor: pointer;
+}
+
+.field {
+    background-color: rgb(96, 124, 102);
+    cursor: pointer;
+}
+
+.field:hover {
+    background-color: saddlebrown;
+}
+
+.failed {
+    background-color: red;
+    animation-name: bomb;
+    animation-duration: 1000ms;
+}
+
+.noBomb {
+    background-color: rgb(151, 187, 159);
+    color: white;
+    font-size: 30px;
+    animation-name: openField;
+    animation-duration: 1000ms;
+}
+
+.flag {
+    background-image: url("../images/flag.png");
+    background-color: rgb(96, 124, 102);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.lose {
+    animation-name: lost;
+    animation-duration: 1000ms;
+}
+
+@keyframes lost {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes openField {
+    from {background-color: rgb(96, 124, 102);color: transparent;}
+    to {background-color: rgb(151, 187, 159);color: white;}
+}
+
+@keyframes bomb {
+    0% {background-color: rgb(151, 187, 159);}
+    10% {background-color: yellow;}
+    100% {background-color: red;}
+}
